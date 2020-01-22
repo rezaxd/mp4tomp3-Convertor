@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <style>
+    *, ::before, ::after{
+      margin: 0;
+      padding: 0;
+    }
+
+    @font-face {
+        font-family: 'ubuntu';
+        src: url('Ubuntu-Regular.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'ubuntu-light';
+        src: url('Ubuntu-Light.ttf') format('truetype');
+    }
+
+    html{
+        font-size: 16px;
+        font-family: 'ubuntu', 'Lacquer', sans-serif;
+        background-color: #222831;
+        color: white;
+        text-align: center;
+    }
+
+    input {
+      font-family: 'ubuntu';
+      border: none;
+      border-radius: 5%;
+      padding: 10px;
+    }
+
+    .submit {
+      background-color: white;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <br><br><br>
+    <h1>Upload mp4 to convert into mp3</h1>
+    <br><br><br>
+    <form ref='uploadForm' 
+      id='uploadForm' 
+      action='http://localhost:3000/upload' 
+      method='post' 
+      encType="multipart/form-data">
+        <input type="file" name="fupload" required accept=".mp4"/><br>
+        <input type='submit' value='Upload!' class='submit'/>
+    </form>     
+  </body>
+</html>
